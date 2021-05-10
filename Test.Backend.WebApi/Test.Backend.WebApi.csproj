@@ -16,5 +16,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Backend.Repository\Test.Backend.Repository.csproj" />
+  </ItemGroup>
+
 
 </Project>

@@ -12,7 +12,7 @@ namespace Test.Backend.Repository.Context
     {
         public TestBackendContext CreateDbContext(string[] args)
         {
-            var directory = Directory.GetCurrentDirectory().Replace("Repositorio", "WebApi");
+            var directory = Directory.GetCurrentDirectory().Replace("Repository", "WebApi");
 
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(directory)
@@ -20,7 +20,7 @@ namespace Test.Backend.Repository.Context
 
             var builder = new DbContextOptionsBuilder<TestBackendContext>();
 
-            var connection = configuration.GetConnectionString("ConexaoPadrao");
+            var connection = configuration.GetConnectionString("DefaultConnection");
 
             builder.UseSqlServer(connection);
 
