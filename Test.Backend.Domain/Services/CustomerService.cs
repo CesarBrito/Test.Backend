@@ -29,7 +29,7 @@ namespace Test.Backend.Domain.Services
         {
             var customer = new Customer() { Id = Guid.NewGuid(), Age = registerCustomer.Age, Name = registerCustomer.Name.Trim() };
 
-            var result = new RequestResult { IsSuccess = true, Errors = customer.Validate() };
+            var result = new RequestResult { IsSuccess = false, Errors = customer.Validate() };
 
             if (result.Errors.Count() < 1)
             {
@@ -37,11 +37,11 @@ namespace Test.Backend.Domain.Services
 
                 if (register > 0)
                 {
+                    result.IsSuccess = true;
                     return result;
                 }
 
                 result.Errors = new List<string> { "Erro on register Customer." };
-                result.IsSuccess = false;
             }
 
             return result;
@@ -67,7 +67,7 @@ namespace Test.Backend.Domain.Services
         {
             var customer = new Customer { Id = updateCustomer.Id, Name = updateCustomer.Name.Trim(), Age = updateCustomer.Age };
 
-            var result = new RequestResult { IsSuccess = true, Errors = customer.Validate() };
+            var result = new RequestResult { IsSuccess = false, Errors = customer.Validate() };
 
             if (result.Errors.Count() < 1)
             {
@@ -75,11 +75,11 @@ namespace Test.Backend.Domain.Services
 
                 if (register > 0)
                 {
+                    result.IsSuccess = true;
                     return result;
                 }
 
                 result.Errors = new List<string> { "Erro on update Customer." };
-                result.IsSuccess = false;
             }
 
             return result;
