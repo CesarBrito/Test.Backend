@@ -11,12 +11,12 @@ namespace Test.Backend.Domain.Interfaces.Repository
     {
         Task<int> RegisterAsync(Customer customer, CancellationToken cancellationToken);
 
-        Task<int> EditAsync(Customer cliente, CancellationToken cancellationToken);
+        Task<int> UpdateAsync(Customer cliente, CancellationToken cancellationToken);
 
         Task<int> DeleteAsync(Guid id, CancellationToken cancellationToken);
 
         Task<Customer> GetAsync(Guid id, CancellationToken cancellationToken);
 
-        Task<IEnumerable<Customer>> GetAllAsync(CancellationToken cancellation);
+        Task<IEnumerable<Customer>> GetAllAsync(CancellationToken cancellationToken);
     }
 }
