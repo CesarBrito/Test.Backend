@@ -34,7 +34,7 @@ Após essa execução é esperado que todos os testes fiquem com o icone verde d
 
 ## Executando a aplicação
 ### Após a execução dos teste, executar a aplicação seguindo os seguintes passos.
-#### Caso o projeto "FightsContest.Application" não estiver selecionado, seguir os seguintes passos:
+#### Caso o projeto "Test.Backend.WebApi" não estiver selecionado, seguir os seguintes passos:
 1. Clicar com o botão direito no projeto "Test.Backend.WebApi".
 2. Clicar no item: Set as StartUp Project(Definir como Projeto de Inicialização).
 #### Após a verificação, seguir os seguites passos:
